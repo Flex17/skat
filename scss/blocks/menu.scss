@@ -1,0 +1,33 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+    z-index: 100;
+    transform: translate(-100%);
+    transition: .3s;
+
+    &-content {
+        padding: 30px;
+    }
+
+    &-list {
+        &__item {
+            margin-top: 30px;
+        }
+
+        &__text {
+            font-size: 16px;
+            color: #7C7D82;
+            transition: .3s;
+
+            &:hover {
+                color: #FF6914;
+            }
+        }
+    }
+}
+
+.menu__active {
+    transform: translate(0%);
+}

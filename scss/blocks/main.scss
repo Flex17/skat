@@ -1,0 +1,134 @@
+.main {
+    background-color: $bg-color;
+
+    &-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &-title {
+        max-width: 670px;
+        color: $white-color;
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    &-subtitle {
+        margin: 24px 0;
+        max-width: 307px;
+    }
+
+    &-advantages {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            align-items: center;
+
+            &:not(&:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+
+        &__text {
+            margin-left: 12px;
+            font-weight: 400;
+            font-size: 16px;
+            color: $white-color;
+        }
+    }
+
+    &-subtitle2 {
+        max-width: 492px;
+        margin-top: 36px;
+    }
+
+    &-button {
+        width: 240px;
+        margin-top: 40px;
+    }
+
+    &-bird {
+        position: absolute;
+        right: 0;
+
+        &__blue {
+            position: absolute;
+            top: 0;
+            left: 118px;
+        }
+
+        &__purple {
+            position: absolute;
+            top: 137px;
+            right: 0;
+        }
+
+        &__orange {
+            position: absolute;
+            bottom: 0;
+            right: 187px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main {
+        padding: 21px 0;
+
+        &-bird {
+            display: none;
+        }
+
+        &-content {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        &-title {
+            font-size: 26px;
+        }
+
+        &-subtitle {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        &-subtitle2 {
+            font-size: 18px;
+        }
+
+        &-button {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        &-content {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        &-bird {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        &-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        &-bird {
+            display: none;
+        }
+    }
+}

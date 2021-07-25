@@ -1,0 +1,208 @@
+.footer {
+    padding-top: 117px;
+    padding-bottom: 78px;
+    background-color: #161C22;
+
+    &-arrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &-social {
+        flex-direction: column;
+        display: flex;
+    }
+
+    &-title {
+        max-width: 370px;
+    }
+
+    &-mobTitle {
+        display: none;
+    }
+
+    &-network {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 192px;
+        margin-top: 40px;
+
+        &__item {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &-communications {
+        flex-direction: column;
+
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+            color: $white-color;
+            margin: 30px 0;
+        }
+
+        &__button {
+            padding: 15px 0;
+            width: 263px;
+        }
+    }
+
+    &-form {
+        &__button {
+            padding: 15px 0;
+            border-radius: 0px 8px 8px 0px;
+            width: 244px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        padding: 50px 0;
+
+        &-arrow {
+            right: 0;
+            top: 0;
+        }
+
+        &-content {
+            width: 88%;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+
+        &-social {
+            order: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        &-network {
+            width: 66%;
+            max-width: 212px;
+        }
+
+        &-form {
+            flex-direction: column;
+
+            &__input {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 14px;
+                max-width: none;
+            }
+
+            &__button {
+                border-radius: 8px;
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        &-communications {
+            margin: 0 auto;
+            order: 1;
+            width: 100%;
+
+            &__text {
+                text-align: center;
+            }
+
+            &__button {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        &-title {
+            display: none;
+        }
+
+        &-mobTitle {
+            display: block;
+            font-size: 18px;
+            max-width: 185px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width:1100px) {
+    .footer {
+        &-content {
+            width: 88%;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+
+        &-mobTitle {
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        &-social {
+            order: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        &-title {
+            display: none;
+        }
+
+        &-network {
+            width: 40%;
+        }
+
+        &-communications {
+            margin: 0 auto;
+            order: 1;
+            width: 100%;
+
+            &__text {
+                text-align: center;
+            }
+
+            &__button {
+                width: 100%;
+                max-width: 555px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        &-form {
+            max-width: 555px;
+            margin: 0 auto;
+
+            &__input {
+                width: 50%;
+            }
+
+            &__button {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        &-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

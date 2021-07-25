@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/Montserrat/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Skat</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-content">
+            <a href="#nav" class="menu-list__item"><img src="img/menu/mobVersion/logo.png" alt="logo" class="menu-content__img"></a>
+            <ul class="menu-list">
+                <li class="menu-list__item"><a class="menu-list__text" href="#question">Пройди опрос</a></li>
+                <!-- /.menu-list__item -->
+                <li class="menu-list__item"><a class="menu-list__text" href="#advantages">О нас</a></li>
+                <!-- /.menu-list__item -->
+                <li class="menu-list__item"><a class="menu-list__text" href="#cases">Кейсы</a></li>
+                <!-- /.menu-list__item -->
+            </ul>
+            <!-- /.menu-list -->
+        </div>
+        <!-- /.menu-content -->
+    </div>
+    <!-- /.menu -->
+    <section class="modal section" id="modal">
+        <div class="modal-wrap">
+            <img src="img/modal/logo_mark.png" alt="img" class="modal-logoMark">
+            <img src="img/modal/mob/logo_mark.png" alt="img" class="modal-moblogoMark">
+            <div class="modal-body">
+                <a href="#" class="modal-close" onclick="windowClose()"><img src="img/modal/close.png" alt="close"></a>
+                
+                <h2 class="modal-title title">Магазин брендовой одежды в Европе Normset</h2>
+                <!-- /.modal-title title -->
+                <a href="normsetonline.com" class="modal-link" target="_blank">normsetonline.com</a>
+                <!-- /.modal-link -->
+                <div class="modal-task">
+                    <div class="modal-task__text">
+                        <p class="modal-task__title">Задача</p>
+                        <!-- /.modal-task__title -->
+                        <p class="modal-task__subtitle">Стояла задача – сверстать ИМ <br> по дизайн-макету, сделать настройки методов оплаты, доставки и интеграцию <br> с сервисом DHL, заполнить номенклатуру, подключить счетчики и разместить <br> на родном хостинге. В общем, <br> интернет-магазин под ключ</p>
+                        <!-- /.modal-task__subtitle -->
+                    </div>
+                    <!-- /.modal-task__text -->
+                    <img src="img/modal/1.png" alt="img" class="modal-task__img">
+                </div>
+                <!-- /.modal-task -->
+                <div class="modal-onlyText">
+                    <p class="modal-onlyText__title modal-task__title">Если нужен только текст</p>
+                    <!-- /.modal-onlyText__title -->
+                    <p class="modal-onlyText__subtitle modal-task__subtitle">Стояла задача – сверстать ИМ <br> по дизайн-макету, сделать настройки методов оплаты, доставки и интеграцию с сервисом DHL, заполнить номенклатуру, подключить счетчики и разместить на родном хостинге. <br> В общем, интернет-магазин под ключ</p>
+                    <!-- /.modal-onlyText__subtitle -->
+                </div>
+                <!-- /.modal-onlyText -->
+                <div class="modal-onlyPicture">
+                    <p class="modal-onlyPicture__title modal-task__title">Если нужно изображение</p>
+                    <!-- /.modal-onlyPicture__title modal-task__title -->
+                    <img src="img/modal/2.png" alt="img" class="modal-onlyPicture__img">
+                </div>
+                <!-- /.modal-onlyPicture -->
+                <div class="modal-insert">
+                    <div class="modal-insert__text">
+                        <p class="modal-insert__title modal-task__title">Если нужна прикольная вставка</p>
+                        <!-- /.modal-insert__title modal-task__title -->
+                        <p class="modal-insert__subtitle modal-task__subtitle">Стояла задача – сверстать ИМ <br> по дизайн-макету, сделать настройки методов оплаты, доставки и интеграцию <br> с сервисом DHL, заполнить номенклатуру, подключить счетчики и разместить <br> на родном хостинге. В общем, <br> интернет-магазин под ключ</p>
+                        <!-- /.modal-insert__subtitle modal-task__subtitle -->
+                    </div>
+                    <!-- /.modal-insert__text -->
+                    <div class="modal-insert__message">
+                        <img src="img/modal/message.svg" alt="img" class="modal-insert__img">
+                    </div>
+                    <!-- /.modal-insert__message -->
+                </div>
+                <!-- /.modal-insert -->
+                <div class="modal-pool">
+                    <h2 class="modal-pool__title title">Похожая ниша или проект?</h2>
+                    <!-- /.modal-pool__title title -->
+                    <div class="modal-pool__buttons">
+                        <button class="button modal-pool__button" id="yes">Да</button>
+                        <!-- /.button modal-pool__button -->
+                        <button class="button modal-pool__button" id="no">Нет</button>
+                        <!-- /.button modal-pool__button -->
+                    </div>
+                    <!-- /.modal-pool__buttons -->
+                </div>
+                <!-- /.modal-pool -->
+                <div class="modal-windowYes">
+                    <p class="modal-windowYes__subtitle subtitle">Хочешь также или даже лучше?<br>Оставь заявку и расскажем, как это сделать</p>
+                    <!-- /.modal-windowYes__subtitle subtitle -->
+                    <form action="#" class="form modal-windowYes__form">
+                        <input type="text" class="input footer-form__input modal-windowYes__input" placeholder="+7 (999) 999-99-99" name="phone">
+                        <button class="button footer-form__button modal-windowYes__button">Получить консультацию</button>
+                    </form>
+                    <!-- /.form modal-windowYes__form -->
+                </div>
+                <!-- /.modal-windowYes -->
+                <div class="modal-windowNo modal-windowYes">
+                    <p class="modal-windowYes__subtitle subtitle modal-windowNo__subtitle subtitle">Механизмы продвижение в целом везде одинаковые. <br> Напиши два слова про свою ситуацию и мы подскажем</p>
+                    <!-- /.modal-windowNo__subtitle subtitle -->
+                    <button class="button footer-communications__button modal-windowNo__button">Написать в Whatsapp</button>
+                </div>
+                <!-- /.modal-windowNo -->
+            </div>
+            <!-- /.modal-body -->
+        </div>
+        <!-- /.modal-wrap -->
+    </section>
+    <!-- /.modal section -->
+
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-about">
+                    <img src="img/nav/logo.png" alt="logo" class="nav-about__logo">
+                    <img src="img/nav/mobVersion/logo.png" alt="logo" class="nav-about__mobLogo">
+                    <div class="nav-items">
+                        <a href="#question" class="nav-items__item">Пройди опрос</a>
+                        <!-- /.nav-items__item -->
+                        <a href="#advantages" class="nav-items__item">О нас</a>
+                        <!-- /.nav-items__item -->
+                        <a href="#cases" class="nav-items__item">Кейсы</a>
+                        <!-- /.nav-items__item -->
+                    </div>
+                    <!-- /.nav-items -->
+                </div>
+                <!-- /.nav-about -->
+                <div class="nav-contacts">
+                    <p class="nav-contacts__questions">Остались вопросы?</p>
+                    <!-- /.nav-contacts__questions -->
+                    <div class="nav-phone">
+                        <img src="img/nav/phone.png" alt="phone">
+                        <a href="tel:+79002390893" class="nav-phone__number">+7 900 239-08-93</a>
+                        <!-- /.nav-phone__number -->
+                    </div>
+                    <!-- /.nav-phone -->
+                </div>
+                <!-- /.nav-contacts -->
+                <a href="#" class="nav-burger">
+                    <span></span>
+                </a>
+                <!-- /.nav-burger -->
+            </div>
+            <!-- /.nav-content -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.nav -->
+    <section class="main section">
+        <div class="container">
+            <div class="main-block">
+                <div class="main-content">
+                    <h1 class="main-title">Упаковка <br> и продвижение малого и среднего бизнеса</h1>
+                    <p class="subtitle main-subtitle"><span>Приводим клиентов</span> онлайн. Столько, <span>сколько нужно</span></p>
+                    <div class="main-advantages">
+                        <div class="main-advantages__item">
+                            <img src="img/main/1.png" alt="img" class="main-advantages__img">
+                            <p class="main-advantages__text">Разработка сайтов любой сложности. От квиза до сервиса</p>
+                            <!-- /.main-advantages__text -->
+                        </div>
+                        <!-- /.main-advantages__item -->
+                        <div class="main-advantages__item">
+                            <img src="img/main/2.png" alt="img" class="main-advantages__img">
+                            <p class="main-advantages__text">Реклама в интернете, которая реально работает</p>
+                            <!-- /.main-advantages__text -->
+                        </div>
+                        <!-- /.main-advantages__item -->
+                        <div class="main-advantages__item">
+                            <img src="img/main/3.png" alt="img" class="main-advantages__img">
+                            <p class="main-advantages__text">Консалтинговые услуги по выстраиванию бизнеса</p>
+                            <!-- /.main-advantages__text -->
+                        </div>
+                        <!-- /.main-advantages__item -->
+                    </div>
+                    <!-- /.main-advantages -->
+                    <p class="main-subtitle2 subtitle" id="question">Ответь <span>на четыре</span> вопроса по делу и <span>получи оптимальное предложение</span> по своему проекту</p>
+                    <!-- /.main-subtitle2 subtitle -->
+                    <button class="button main-button">Пройти опрос</button>
+                    <!-- /.button main-button -->
+                </div>
+                <!-- /.main-content -->
+                <div class="main-bird">
+                    <img src="img/main/bird.png" alt="img">
+                    <img src="img/main/blue.png" alt="img" class="main-bird__blue">
+                    <img src="img/main/purple.png" alt="img" class="main-bird__purple">
+                    <img src="img/main/orange.png" alt="img" class="main-bird__orange">
+                </div>
+                <!-- /.main-bird -->
+            </div>
+            <!-- /.main-block -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.main -->
+    <section class="advantages section" id="advantages">
+        <div class="container">
+            <div class="advantages-content">
+                <h2 class="advantages-title title">Уже 2 года делаем хорошие и простые сайты, которые</h2>
+                <!-- /.advantages-title title -->
+                <div class="advantages-block">
+                    <div class="advantages-block__item">
+                        <img src="img/advantages/1.png" alt="img" class="advantages-block__img">
+                        <p class="advantages-block__text">Не лагают, с отличной скоростью</p>
+                        <!-- /.advantages-block__text -->
+                    </div>
+                    <!-- /.advantages-block__item -->
+                    <div class="advantages-block__item">
+                        <img src="img/advantages/2.png" alt="img" class="advantages-block__img">
+                        <p class="advantages-block__text">Работают бесперебойно, экономят деньги и время</p>
+                        <!-- /.advantages-block__text -->
+                    </div>
+                    <!-- /.advantages-block__item -->
+                    <div class="advantages-block__item">
+                        <img src="img/advantages/3.png" alt="img" class="advantages-block__img">
+                        <p class="advantages-block__text">С чистым кодоми находятся на первой странице в поиске</p>
+                        <!-- /.advantages-block__text -->
+                    </div>
+                    <!-- /.advantages-block__item -->
+                    <div class="advantages-block__item">
+                        <img src="img/advantages/4.png" alt="img" class="advantages-block__img">
+                        <p class="advantages-block__text">Грамотно упакованы и удобны для клиентов</p>
+                        <!-- /.advantages-block__text -->
+                    </div>
+                    <!-- /.advantages-block__item -->
+                    <div class="advantages-block__item">
+                        <img src="img/advantages/5.png" alt="img" class="advantages-block__img">
+                        <p class="advantages-block__text">С нужным дизайном, который влияет на решение</p>
+                        <!-- /.advantages-block__text -->
+                    </div>
+                    <!-- /.advantages-block__item -->
+                    <div class="advantages-block__item">
+                        <img src="img/advantages/6.png" alt="img" class="advantages-block__img">
+                        <p class="advantages-block__text">Могут оптимизироваться под любые задачи</p>
+                        <!-- /.advantages-block__text -->
+                    </div>
+                    <!-- /.advantages-block__item -->
+                    <div class="advantages-block__onlyText">
+                        <p class="subtitle advantages-subtitle">А еще они продают <span>Продают и приносят деньги</span></p>
+                        <!-- /.subtitle advantages-subtitle -->
+                    </div>
+                    <!-- /.advantages-block__onlyText -->
+                </div>
+                <!-- /.advantages-block -->
+                <p class="subtitle advantages-subtitle2">Оставляй заявку в WhatsApp и получи нашу консультацию бесплатно</p>
+                <!-- /.subtitle advantages-subtitle2 -->
+                <button class="button advantages-button">Написать в WhatsApp</button>
+                <!-- /.button advantages-button -->
+                <div class="advantages-checkNext">
+                    <a href="#cases" class="advantages-checkNext__text">Или посмотри кейсы</a>
+                    <!-- /.advantages-checkNext__text -->
+                    <img src="img/advantages/arrow.png" alt="img">
+                </div>
+                <!-- /.advantages-checkNext -->
+            </div>
+            <!-- /.advantages-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.advantages section -->
+    <section class="cases section" id="cases">
+        <div class="container">
+            <div class="cases-content">
+                <h2 class="title cases-title">Кейсы</h2>
+                <!-- /.title cases-title -->
+                <p class="cases-descriptions">Нажми на кейс, чтобы узнать детали</p>
+                <!-- /.cases-descriptions -->
+                <div class="cases-block">
+                    <div class="cases-block__item" onclick="windowUp()">
+                        <img src="img/cases/1.png" alt="img" class="cases-block__img">
+                        <div class="cases-block__content">
+                            <p class="cases-block__title">Магазин брендовой одежды в Европе Normset</p>
+                            <!-- /.cases-block__title -->
+                            <p class="cases-block__subtitle">Сайт под ключ</p>
+                            <!-- /.cases-block__subtitle -->
+                        </div>
+                        <!-- /.cases-block__content -->
+                    </div>
+                    <!-- /.cases-block__item -->
+                    <div class="cases-block__item">
+                        <img src="img/cases/2.png" alt="img" class="cases-block__img">
+                        <div class="cases-block__content">
+                            <p class="cases-block__title">Фитнес-студия TWINSFIT</p>
+                            <!-- /.cases-block__title -->
+                            <p class="cases-block__subtitle">Реклама под ключ</p>
+                            <!-- /.cases-block__subtitle -->
+                        </div>
+                        <!-- /.cases-block__content -->
+                    </div>
+                    <!-- /.cases-block__item -->
+                    <div class="cases-block__item">
+                        <img src="img/cases/3.png" alt="img" class="cases-block__img">
+                        <div class="cases-block__content">
+                            <p class="cases-block__title">Механизированная штукатурка в Краснодаре</p>
+                            <!-- /.cases-block__title -->
+                            <p class="cases-block__subtitle">Реклама под ключ</p>
+                            <!-- /.cases-block__subtitle -->
+                        </div>
+                        <!-- /.cases-block__content -->
+                    </div>
+                    <!-- /.cases-block__item -->
+                    <div class="cases-block__item cases-block__itemHidden">
+                        <img src="img/cases/4.png" alt="img" class="cases-block__img">
+                        <div class="cases-block__content">
+                            <p class="cases-block__title">Крепления для кондиционеров в Краснодаре Стальной крепеж</p>
+                            <!-- /.cases-block__title -->
+                            <p class="cases-block__subtitle">Сайт + Редизайн</p>
+                            <!-- /.cases-block__subtitle -->
+                        </div>
+                        <!-- /.cases-block__content -->
+                    </div>
+                    <!-- /.cases-block__item -->
+                    <div class="cases-block__item cases-block__itemHidden">
+                        <img src="img/cases/5.png" alt="img" class="cases-block__img">
+                        <div class="cases-block__content">
+                            <p class="cases-block__title">Судебная защита и юридическая помощь в Москве ЛидерАдвокат.ру</p>
+                            <!-- /.cases-block__title -->
+                            <p class="cases-block__subtitle">Сайт + процесс обработки заявок</p>
+                            <!-- /.cases-block__subtitle -->
+                        </div>
+                        <!-- /.cases-block__content -->
+                    </div>
+                    <!-- /.cases-block__item -->
+                    <div class="cases-block__item cases-block__itemHidden">
+                        <img src="img/cases/6.png" alt="img" class="cases-block__img">
+                        <div class="cases-block__content">
+                            <p class="cases-block__title">Интернет-магазин спортивной одежды в Казахстане</p>
+                            <!-- /.cases-block__title -->
+                            <p class="cases-block__subtitle">Сайт под ключ</p>
+                            <!-- /.cases-block__subtitle -->
+                        </div>
+                        <!-- /.cases-block__content -->
+                    </div>
+                    <!-- /.cases-block__item -->
+                </div>
+                <!-- /.cases-block -->
+                <button class="button cases-button">Смотреть еще</button>
+                <!-- /.button cases-button -->
+            </div>
+            <!-- /.cases-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.cases section -->
+    <section class="footer section">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#nav" class="footer-arrow"><img src="img/footer/arrow.png" alt="img"></a>
+                <h2 class="title footer-mobTitle">Заполни удобный для себя формат и отправляй нам</h2>
+                <!-- /.title footer-mobTitle -->
+                <div class="footer-social">
+                    <h2 class="title footer-title">Заполни удобный для себя формат и отправляй нам</h2>
+                    <!-- /.title footer-title -->
+                    <div class="footer-network">
+                        <a href="#"><img src="img/footer/telega.png" alt="img" class="footer-network__item"></a>
+                        <a href="#"><img src="img/footer/viber.png" alt="img" class="footer-network__item"></a>
+                        <a href="#"><img src="img/footer/inst.png" alt="img" class="footer-network__item"></a>
+                    </div>
+                    <!-- /.footer-network -->
+                </div>
+                <!-- /.footer-social -->
+                <div class="footer-communications">
+                    <form action="#" class="form footer-form">
+                        <input type="text" class="input footer-form__input" placeholder="+7 (999) 999-99-99" name="phone">
+                        <button class="button footer-form__button">Получить консультацию</button>
+                        <!-- /.button footer-button -->
+                    </form>
+                    <!-- /.form footer-form -->
+                    <p class="footer-communications__text">Или</p>
+                    <!-- /.footer-communications__text -->
+                    <button class="button footer-communications__button">Написать в Whatsapp</button>
+                    <!-- /.button footer-button -->
+                </div>
+                <!-- /.footer-communications -->
+            </div>
+            <!-- /.footer-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.footer section -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // плавная прокрутка
+        $("body").on('click', '[href*="#"]', function(e){
+            e.preventDefault();
+            let fixed_offset = 100;
+            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+        });
+    </script>
+</body>
+</html>

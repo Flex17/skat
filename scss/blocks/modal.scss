@@ -1,0 +1,402 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+    z-index: 120;
+    display: block;
+    display: none;
+    overflow-y: scroll;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.75);
+
+    &-wrap {
+        max-width: 970px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: $bg-color;
+        position: relative;
+        border-radius: 8px;
+    }
+
+    &-body {
+        max-width: 770px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 60px 0;
+        background-color: $bg-color;
+    }
+
+    &-logoMark {
+        position: absolute;
+        right: 0;
+        top: 857px;
+    }
+
+    &-moblogoMark {
+        display: none;
+    }
+
+    &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &-windowYes {
+        margin-top: 30px;
+        display: none;
+
+        &__subtitle {
+            line-height: 1;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-windowNo {
+        display: none;
+    }
+
+    &-title {
+        max-width: 586px;
+        margin-bottom: 16px;
+    }
+
+    &-link {
+        font-weight: 400;
+        font-size: 14px;
+        color: $white-color;
+    }
+
+    &-task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 41px;
+        margin-bottom: 33px;
+
+        &__text {
+            max-width: 370px;
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 700;
+            color: $white-color;
+            margin-bottom: 12px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: $white-color;
+        }
+
+        &__img {
+            border-radius: 8px;
+        }
+    }
+
+    &-onlyPicture {
+        margin-top: 60px;
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__img {
+            border-radius: 8px;
+        }
+    }
+
+    &-insert {
+        margin: 60px 0;
+        display: flex;
+        align-items: center;
+
+        &__text {
+            max-width: 370px;
+        }
+
+        &__message {
+            position: relative;
+            margin-left: 30px;
+            width: 304px;
+        }
+
+        &__img {
+            z-index: 125;
+        }
+    }
+
+    &-pool {
+        &__buttons {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        &__button {
+            width: 100px;
+            padding: 15px;
+            background-color: transparent;
+            border-radius: 8px;
+            border: 1px solid $orange-color;
+            transition: .3s;
+
+            &:not(&:last-child) {
+                margin-right: 30px;
+            }
+
+            &:hover {
+                background-color: $orange-color;
+            }
+
+            &:focus {
+                background-color: $orange-color;
+            }
+
+        }
+    }
+}
+
+// Отключение прокрутки
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px) {
+    .modal {
+        &-windowYes {
+            &__form {
+                flex-direction: column;
+            }
+
+            &__input {
+                width: 100%;
+                border-radius: 8px;
+            }
+
+            &__button {
+                width: 100%;
+                border-radius: 8px;
+                margin-top: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        padding: 0;
+
+        &-logoMark {
+            display: none;
+        }
+
+        &-moblogoMark {
+            display: block;
+            position: absolute;
+            top: 1230px;
+            right: 0;
+        }
+
+        &-body {
+            position: relative;
+            padding-top: 37px;
+            padding-bottom: 113px;
+        }
+
+        &-close {
+            top: initial;
+            bottom: 20px;
+            right: 10px;
+            position: absolute;
+        }
+
+        &-windowYes {
+            &__subtitle {
+                font-size: 16px;
+            }
+        }
+
+        &-title {
+            font-size: 18px;
+        }
+
+        &-task {
+            flex-direction: column;
+            align-items: start;
+
+            &__img {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        &-onlyPicture {
+            margin-top: 40px;
+
+            &__img {
+                width: 100%;
+            }
+        }
+
+        &-insert {
+            flex-direction: column;
+            align-items: initial;
+            margin-top: 40px;
+
+            &__text {
+                text-align: left;
+            }
+
+            &__message {
+                margin-left: 0;
+                margin-top: 25px;
+                width: 85%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &__img {
+                width: 218px;
+            }
+        }
+
+        &-pool {
+
+            &__title {
+                font-size: 18px;
+            }
+
+            &__buttons {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            &__button {
+                width: 44%;
+
+                &:not(&:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-windowYes {
+            &__form {
+                max-width: initial;
+                margin: initial;
+
+                &__input {
+                    width: initial;
+                }
+
+                &__button {
+                    padding: 15px 0;
+                    border-radius: 0px 8px 8px 0px;
+                    width: 244px;
+                }
+            }
+        }
+
+        &-windowNo {
+            &__button {
+                width: 100%;
+                max-width: initial;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 653px) and (max-width:768px) {
+    .modal {
+        &-moblogoMark {
+            display: block;
+            position: absolute;
+            top: 1350px;
+            right: 0;
+            z-index: 300;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:820px) {
+    .modal {
+        &-logoMark {
+            display: none;
+        }
+
+        &-insert {
+            &__img {
+                width: 280px !important;
+            }
+        }
+
+        &-moblogoMark {
+            display: block;
+            position: absolute;
+            top: 1050px;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:653px) {
+    .modal {
+        &-moblogoMark {
+            display: block;
+            position: absolute;
+            top: 1280px;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width:950px) {
+    .modal {
+        &-logoMark {
+            display: none;
+        }
+
+        &-moblogoMark {
+            display: block;
+            position: absolute;
+            top: 1000px;
+            right: 0;
+        }
+
+        &-onlyPicture {
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .modal {
+        &-body {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        &-windowNo {
+            &__button {
+                width: 244px;
+                max-width: initial;
+                display: block;
+                margin: initial;
+            }
+        }
+
+        &-moblogoMark {
+            z-index: 300;
+        }
+    }
+}
+
+//950 и больше все ок
