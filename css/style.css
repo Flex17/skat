@@ -141,6 +141,14 @@ input {
   background-color: #31373B;
 }
 
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
 .nav {
   background-color: #1F2A33;
   padding: 10px 0px;
@@ -986,8 +994,6 @@ input {
   height: 100%;
   background-color: #1F2A33;
   z-index: 120;
-  display: block;
-  display: none;
   overflow-y: scroll;
   padding: 0;
   background: rgba(0, 0, 0, 0.75);
@@ -1019,6 +1025,7 @@ input {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 .modal-windowYes {
   margin-top: 30px;

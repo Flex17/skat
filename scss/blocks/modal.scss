@@ -4,8 +4,6 @@
     height: 100%;
     background-color: $bg-color;
     z-index: 120;
-    display: block;
-    display: none;
     overflow-y: scroll;
     padding: 0;
     background: rgba(0, 0, 0, 0.75);
@@ -41,6 +39,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
+        cursor: pointer;
     }
 
     &-windowYes {

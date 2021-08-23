@@ -1,86 +1,123 @@
-// Открытие меню на моб устройствах
-let navBurger = document.querySelector(".nav-burger");
+window.addEventListener('DOMContentLoaded', () => {
+    //* Открытие меню на моб устройствах
+    let navBurger = document.querySelector(".nav-burger");
 
-navBurger.addEventListener("click", function(e){
-    e.preventDefault();
-
-    navBurger.classList.toggle("burger__active");
-})
-
-
-// Открытие мобильного меню
-let menu = document.querySelector(".menu");
-
-navBurger.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    menu.classList.toggle("menu__active");
-});
-
-// Переход пунктов меню до их якорных ссылок
-let menuItem = document.querySelectorAll(".menu-list__item");
-let burger = document.querySelector(".nav-burger");
-
-menuItem.forEach((item) => {
-    item.addEventListener("click", function(e) {
+    navBurger.addEventListener("click", function(e){
         e.preventDefault();
 
-        menu.classList.remove("menu__active");
-
-        //закрывает бургер при нажатии на один из элементов меню
-
-        burger.classList.remove("burger__active");
+        navBurger.classList.toggle("burger__active");
     });
-});
 
 
-//модальное окно открытие и закрытие
+    //* Открытие мобильного меню
+    let menu = document.querySelector(".menu");
 
-function windowUp () {
-document.getElementById('modal').style.display="block";
-}
+    navBurger.addEventListener("click", function(e) {
+        e.preventDefault();
 
-
-function windowClose () {
-document.getElementById('modal').style.display="none";
-document.body.style.backgroundColor = '#EEEEEE';
-}
-
-
-// Открытие кейсов скрытых
- 
-let casesButton = document.querySelector(".cases-button");
-let casesHidden = document.querySelectorAll(".cases-block__itemHidden");
-
-casesButton.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    casesHidden.forEach((item) => {
-        item.classList.toggle("cases-block__active");
+        menu.classList.toggle("menu__active");
     });
-});
+
+    //* Переход пунктов меню до их якорных ссылок
+    let menuItem = document.querySelectorAll(".menu-list__item");
+    let burger = document.querySelector(".nav-burger");
+
+    menuItem.forEach((item) => {
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            menu.classList.remove("menu__active");
+
+            //* закрывает бургер при нажатии на один из элементов меню
+
+            burger.classList.remove("burger__active");
+        });
+    });
 
 
-// Опрос в модальном окне
+    //* модальное окно открытие и закрытие
 
-let buttons = document.querySelector(".modal-pool__buttons");
+    const modal = document.getElementById('modal');
+    const cases = document.querySelectorAll('.cases-block__item');
+    const modalClose = document.querySelector('.modal-close');
 
-let buttonYes = document.getElementById("yes");
-let buttonNo = document.getElementById("no");
+    
+    function showModal () {
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    
+    function closeModal () {
+        modal.classList.remove('show');
+        modal.classList.add('hide');
+        document.body.style.backgroundColor = '#EEEEEE';
+        document.body.style.overflow = '';
+    }
 
-let windowYes = document.querySelector(".modal-windowYes");
-let windowNo = document.querySelector(".modal-windowNo");
+    cases[0].addEventListener('click', function () {
+        showModal(); 
+    });
 
-buttonYes.addEventListener("click", function(e) {
-    e.preventDefault();
+    modalClose.addEventListener('click', function () {
+       closeModal(); 
+    });
 
-    windowYes.style.display="block";
-    buttons.style.display="none";
-});
+    document.addEventListener('keydown', function (e) {
+        if (e.code === "Escape" && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
 
-buttonNo.addEventListener("click", function(e) {
-    e.preventDefault();
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal || e.target.getAttribute('data-close') == "") {
+            closeModal();
+        } 
+    });
 
-    windowNo.style.display="block";
-    buttons.style.display="none";
+
+    //* Открытие кейсов скрытых
+    
+    const casesButton = document.querySelector(".cases-button");
+    const casesHidden = document.querySelectorAll(".cases-block__itemHidden");
+
+    casesButton.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        casesHidden.forEach((item) => {
+            item.classList.toggle("show");
+        });
+    });
+
+
+    //* Опрос в модальном окне
+
+    const buttons = document.querySelectorAll(".modal-pool__button");
+
+    const buttonYes = document.getElementById("yes");
+    const buttonNo = document.getElementById("no");
+
+    const windowYes = document.querySelector(".modal-windowYes");
+    const windowNo = document.querySelector(".modal-windowNo");
+
+    function hidePoolButton(btns) {
+        btns.forEach(btn => {
+            btn.classList.add('hide');
+        });
+    }
+
+    buttonYes.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        windowYes.classList.add('show');
+        hidePoolButton(buttons);
+    });
+
+    buttonNo.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        windowNo.classList.add('show');
+        hidePoolButton(buttons);
+    });
 });
