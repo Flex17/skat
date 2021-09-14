@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -67,7 +67,7 @@ input {
 }
 
 .button {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   background-color: #FD7427;
   border-radius: 8px;
   padding: 25px 0;
@@ -89,7 +89,7 @@ input {
 }
 
 .input {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   border-radius: 8px 0px 0px 8px;
   width: 311px;
   background-color: #4D5358;
@@ -99,7 +99,7 @@ input {
   color: #fff;
 }
 .input::placeholder {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -115,4 +115,9 @@ input {
 
 .show {
   display: block !important;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
 }
